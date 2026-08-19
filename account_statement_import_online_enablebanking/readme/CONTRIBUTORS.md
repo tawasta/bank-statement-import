@@ -1,0 +1,4 @@
+- [Futural Oy](https://futural.fi):
+   - Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
+- [RockIT Oy](https://futural.fi):
+   - Mikko Salmela <mikko.salmela@rockit.fi>

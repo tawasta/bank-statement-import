@@ -1,0 +1,391 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_statement_import_online_enablebanking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0-20260817\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-08-21 05:39+0000\n"
+"PO-Revision-Date: 2026-08-21 08:40+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.view_account_journal_form
+msgid "<span class=\"o_stat_text\">Bank authentication</span>"
+msgstr "<span class=\"o_stat_text\">Pankkitunnistautuminen</span>"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__api_origin
+msgid "API Origin"
+msgstr "API lähde"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "ASPSP"
+msgstr "ASPSP"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__aspsp_country
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__aspsp_country
+msgid "ASPSP country"
+msgstr "ASPSP-maa"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "ASPSP info"
+msgstr "ASPSP-tiedot"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__aspsp_name
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__aspsp_name
+msgid "ASPSP name"
+msgstr "ASPSP:n nimi"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/online_bank_statement_provider.py:0
+msgid "Account %(account_number)s not found."
+msgstr "Tiliä %(account_number)s ei löytynyt."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__psu_type
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__psu_type
+msgid "Account type"
+msgstr "Tilityyppi"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__application_id
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__application_id
+msgid "Application ID"
+msgstr "Sovellustunnus"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_enablebanking_application__application_id
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_online_bank_statement_provider__application_id
+msgid "Application ID from your EnableBanking.com portal"
+msgstr "Sovellustunnus EnableBanking.com-portaalistasi"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model,name:account_statement_import_online_enablebanking.model_enablebanking_application
+msgid "Application for Enablebanking authentication"
+msgstr "Enablebanking-todentamisen hakemus"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid ""
+"Are you sure you want to deauthorize this application? This will require re-"
+"authentication."
+msgstr ""
+"Haluatko varmasti poistaa tämän sovelluksen käyttöoikeuden? Tämä edellyttää "
+"uudelleenkirjautumista."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__auth_code
+msgid "Auth code"
+msgstr "Vahvistuskoodi"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_enablebanking_application__valid_until
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_online_bank_statement_provider__enablebanking_valid_until
+msgid "Authentication valid until"
+msgstr "Todennus voimassa seuraavaan päivään asti"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__bank_id
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__bank_id
+msgid "Bank"
+msgstr "Pankki"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.view_account_journal_form
+msgid "Bank authentication"
+msgstr "Pankkitunnistus"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/online_bank_statement_provider.py:0
+msgid ""
+"Bank authentication is invalid. Please re-authenticate to fetch bank "
+"statements."
+msgstr ""
+"Pankkitunnistus ei ole kelvollinen. Suorita tunnistus uudelleen, jotta voit "
+"hakea tiliotteet."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__online_bank_statement_provider_ids
+msgid "Bank statement providers"
+msgstr "Tiliotteiden toimittajat"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields.selection,name:account_statement_import_online_enablebanking.selection__enablebanking_application__psu_type__business
+msgid "Business"
+msgstr "Yritys"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__company_id
+msgid "Company"
+msgstr "Yritys"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid ""
+"Could not find ASPSP info. Please check account type and your bank BIC. \n"
+"Found ASPSPs: %(aspsp_names)s"
+msgstr ""
+"ASPSP-tietoja ei löytynyt. Tarkista tilityyppi ja pankkisi BIC-koodi. \n"
+"Löydetyt ASPSP:t: %(aspsp_names)s"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/controllers/main.py:0
+msgid "Could not find EnableBanking application for state: %s"
+msgstr "EnableBanking-sovellusta ei löytynyt tilalla: %s"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid "Country code is missing! Please add a country for your company."
+msgstr "Maakoodi puuttuu! Lisää yrityksesi maa."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "Credentials"
+msgstr "Tunnukset"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "Deauthorize"
+msgstr "Poista valtuutus"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/online_bank_statement_provider.py:0
+msgid ""
+"Did not find any accounts. Please check linked accounts in Enable Banking "
+"management and re-authenticate"
+msgstr ""
+"Tilejä ei löytynyt. Tarkista linkitetyt tilit ”Enable Banking” -hallinnassa "
+"ja suorita tunnistautuminen uudelleen."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_account_journal__display_name
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__display_name
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__display_name
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_pull_wizard__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.online_bank_statement_provider_form
+msgid "Enable Banking"
+msgstr "Ota pankkipalvelut käyttöön"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.actions.act_window,name:account_statement_import_online_enablebanking.enablebanking_application_action
+#: model:ir.ui.menu,name:account_statement_import_online_enablebanking.enablebanking_application_menu
+msgid "EnableBanking Applications"
+msgstr "EnableBanking-sovellukset"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__enablebanking_application_id
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "EnableBanking application"
+msgstr "EnableBanking-sovellus"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/account_journal.py:0
+msgid "EnableBanking application not found. Please check the configuration."
+msgstr "EnableBanking-sovellusta ei löytynyt. Tarkista asetukset."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__enablebanking_state
+msgid "Enablebanking State"
+msgstr "Enablebanking-tila"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/controllers/main.py:0
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+#: code:addons/account_statement_import_online_enablebanking/models/online_bank_statement_provider.py:0
+msgid "Error response %(status_code)s: %(response_text)s"
+msgstr "Virhe %(status_code)s: %(response_text)s"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "Form"
+msgstr "Lomake"
+
+#. module: account_statement_import_online_enablebanking
+#: model_terms:ir.ui.view,arch_db:account_statement_import_online_enablebanking.enablebanking_application_form_view
+msgid "Get ASPSP info"
+msgstr "Hae ASPSP-tiedot"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_enablebanking_application__enablebanking_state
+msgid "Helper for identifying the correct provider"
+msgstr "Apuväline oikean palveluntarjoajan tunnistamiseen"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_account_journal__id
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__id
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__id
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_pull_wizard__id
+msgid "ID"
+msgstr "Tunnus"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model,name:account_statement_import_online_enablebanking.model_account_journal
+msgid "Journal"
+msgstr "Päiväkirja"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__key_name
+msgid "Key Name"
+msgstr "Avaimen nimi"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__jwt
+msgid "Latest JWT"
+msgstr "Uusin JWT"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__session
+msgid "Latest session"
+msgstr "Viimeisin istunto"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/controllers/main.py:0
+msgid "New user session has been created: %s"
+msgstr "Uusi käyttäjäistunto on luotu: %s"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model,name:account_statement_import_online_enablebanking.model_online_bank_statement_provider
+msgid "Online Bank Statement Provider"
+msgstr "Verkkopankkitiliotteiden tarjoaja"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model,name:account_statement_import_online_enablebanking.model_online_bank_statement_pull_wizard
+msgid "Online Bank Statement Pull Wizard"
+msgstr "Verkkopankkitiliotteiden hakutyökalu"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields.selection,name:account_statement_import_online_enablebanking.selection__enablebanking_application__psu_type__personal
+msgid "Personal"
+msgstr "Henkilökohtainen"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid "Please add a BIC to your bank account"
+msgstr "Lisää BIC-koodi pankkitiliisi"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid "Please configure a bank account"
+msgstr "Määritä pankkitili"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__key
+msgid "Private key"
+msgstr "Yksityinen avain"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_enablebanking_application__key
+msgid "Private key from your EnableBanking.com portal"
+msgstr "EnableBanking.com-portaalisi yksityinen avain"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid "Private key is missing! Please add a private key for your application."
+msgstr "Private key puuttuu! Lisää sellainen sovelluksellesi."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__redirect_url
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__redirect_url
+msgid "Redirect URL"
+msgstr "Uudelleenohjaus-URL"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid ""
+"Redirect URL is not registered with your application. \n"
+"Please add '%s' to allowed redirect URLs."
+msgstr ""
+"Uudelleenohjaus-URL:ää ei ole rekisteröity sovellukseesi. \n"
+"Lisää '%s' sallittujen uudelleenohjaus-URL-osoitteiden joukkoon."
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__user_id
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__enablebanking_user_id
+msgid "Responsible"
+msgstr "Vastuullinen"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_enablebanking_application__user_id
+#: model:ir.model.fields,help:account_statement_import_online_enablebanking.field_online_bank_statement_provider__enablebanking_user_id
+msgid ""
+"The person to be notified about expired authentication or other problems"
+msgstr ""
+"Henkilö, jolle ilmoitetaan vanhentuneesta todennuksesta tai muista "
+"ongelmista"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/enablebanking_application.py:0
+msgid ""
+"This application is not yet activated. Please do that before continuing"
+msgstr "Tätä sovellusta ei ole vielä aktivoitu. Aktivoi se ennen kuin jatkat."
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/models/account_journal.py:0
+msgid "This authentication only works for EnableBanking-provider"
+msgstr "Tämä todennus toimii vain EnableBanking-palveluntarjoajan kanssa"
+
+#. module: account_statement_import_online_enablebanking
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_enablebanking_application__valid_until
+#: model:ir.model.fields,field_description:account_statement_import_online_enablebanking.field_online_bank_statement_provider__enablebanking_valid_until
+msgid "Valid until"
+msgstr "Voimassaolo"
+
+#. module: account_statement_import_online_enablebanking
+#. odoo-python
+#: code:addons/account_statement_import_online_enablebanking/wizards/online_bank_statement_pull_wizard.py:0
+msgid "Your bank authentication is invalid. Please authenticate and try again"
+msgstr ""
+"Pankkitunnuksesi eivät ole kelvolliset. Kirjaudu sisään ja yritä uudelleen."

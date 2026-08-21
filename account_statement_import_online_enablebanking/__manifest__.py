@@ -1,0 +1,40 @@
+##############################################################################
+#
+#    Author: Futural Oy, RockIT Oy
+#    Copyright 2021 Futural Oy, RockIT Oy
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU Affero General Public License as
+#    published by the Free Software Foundation, either version 3 of the
+#    License, or (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#    GNU Affero General Public License for more details.
+#
+#    You should have received a copy of the GNU Affero General Public License
+#    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
+#
+##############################################################################
+
+{
+    "name": "Online Bank Statements: EnableBanking.com",
+    "summary": "Fetch bank account statements via EnableBanking.com",
+    "version": "19.0.1.0.0",
+    "category": "Invoicing",
+    "website": "https://github.com/tawasta/bank-statement-import",
+    "author": "RockIT, Futural",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": ["pyjwt"], "bin": []},
+    "depends": ["account_statement_import_online"],
+    "data": [
+        "security/ir_model_access.xml",
+        "views/account_journal.xml",
+        "views/online_bank_statement_provider.xml",
+        "views/enablebanking_application.xml",
+    ],
+    "demo": [],
+}

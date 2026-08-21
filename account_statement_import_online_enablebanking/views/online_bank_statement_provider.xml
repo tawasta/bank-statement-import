@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <record model="ir.ui.view" id="online_bank_statement_provider_form">
+    <field name="name">online.bank.statement.provider.form.enablebanking</field>
+    <field name="model">online.bank.statement.provider</field>
+    <field
+      name="inherit_id"
+      ref="account_statement_import_online.online_bank_statement_provider_form"
+    />
+    <field name="arch" type="xml">
+      <xpath expr="//group[@name='main']" position="inside">
+        <group
+          name="enablebanking"
+          string="Enable Banking"
+          invisible="service != 'enablebanking'"
+        >
+          <field name="bank_id" readonly="1" />
+          <field
+            name="enablebanking_application_id"
+            domain="[('bank_id', '=', bank_id)]"
+            required="service == 'enablebanking'"
+          />
+          <field name="enablebanking_valid_until" />
+          <field name="enablebanking_user_id" />
+          <field name="psu_type" />
+          <field name="redirect_url" />
+          <field name="aspsp_name" />
+          <field name="aspsp_country" />
+        </group>
+      </xpath>
+    </field>
+  </record>
+</odoo>

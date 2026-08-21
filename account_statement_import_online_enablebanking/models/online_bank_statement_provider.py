@@ -1,4 +1,3 @@
-import json
 import logging
 from datetime import datetime
 
@@ -73,7 +72,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
         self.ensure_one()
         enablebanking = self.enablebanking_application_id
 
-        session = json.loads(enablebanking.session)
+        session = enablebanking._get_session_dict()
         # Using the first available account for the following API calls
         if not session.get("accounts"):
             raise ValidationError(
@@ -84,6 +83,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
                 )
             )
 
+        _logger.debug(f"Accounts in session: {session['accounts']}")
         # TODO: search for the correct account
         accounts = {}
         for account in session["accounts"]:

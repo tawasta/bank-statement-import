@@ -93,17 +93,32 @@ class EnablebankingApplication(models.Model):
 
         return url
 
+    def _get_session_dict(self):
+        """
+        Get session as dict
+        """
+        self.ensure_one()
+        if not self.session:
+            return {}
+        return json.loads(self.session)
+
     def _compute_valid_until(self):
         for record in self:
-            if record.session and record.session != "{}":
-                session = json.loads(record.session)
+            session = record._get_session_dict()
+
+            if session:
                 _logger.debug(f"Session data: {session}")
                 # Get valid until from session data
                 valid_until = session.get("access", {}).get("valid_until")
-                # Replace Z with +00:00 and remove timezone info
-                valid_until = valid_until.replace("Z", "+00:00")
-                valid_until = datetime.fromisoformat(valid_until).replace(tzinfo=None)
-                record.valid_until = valid_until
+                if valid_until:
+                    # Replace Z with +00:00 and remove timezone info
+                    valid_until = valid_until.replace("Z", "+00:00")
+                    valid_until = datetime.fromisoformat(valid_until).replace(
+                        tzinfo=None
+                    )
+                    record.valid_until = valid_until
+                else:
+                    record.valid_until = False
             else:
                 record.valid_until = False
 
@@ -216,6 +231,15 @@ class EnablebankingApplication(models.Model):
         return base_headers
 
     def _enablebanking_get_jwt_token(self):
+        self.ensure_one()
+        if not self.key:
+            raise ValidationError(
+                self.env._(
+                    "Private key is missing! "
+                    "Please add a private key for your application."
+                )
+            )
+
         iat = int(datetime.now().timestamp())
 
         # Generate JWT token

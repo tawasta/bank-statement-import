@@ -21,6 +21,15 @@ class EnableBankingController(http.Controller):
             .sudo()
             .search([("enablebanking_state", "=", enablebanking_state)], limit=1)
         )
+
+        if not enablebanking:
+            raise ValidationError(
+                request.env._(
+                    "Could not find EnableBanking application for state: %s",
+                    enablebanking_state,
+                )
+            )
+
         jwt = enablebanking._enablebanking_get_jwt_token()
         base_headers = {"Authorization": f"Bearer {jwt}"}
         _logger.debug(f"Using auth code: {auth_code}")
@@ -34,13 +43,13 @@ class EnableBankingController(http.Controller):
         if r.status_code == 200:
             session = r.json()
             _logger.info(
-                self.env._(
+                request.env._(
                     "New user session has been created: %s", session.get("session_id")
                 )
             )
         else:
             raise ValidationError(
-                self.env._(
+                request.env._(
                     "Error response %(status_code)s: %(response_text)s",
                     status_code=r.status_code,
                     response_text=r.text,

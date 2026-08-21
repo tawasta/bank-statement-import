@@ -25,7 +25,7 @@
     "category": "Invoicing",
     "website": "https://github.com/tawasta/bank-statement-import",
     "author": "RockIT, Futural",
-    "license": "LGPL-3",
+    "license": "AGPL-3",
     "application": False,
     "installable": True,
     "external_dependencies": {"python": ["pyjwt"], "bin": []},

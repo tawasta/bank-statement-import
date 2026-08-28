@@ -36,5 +36,6 @@
         "views/online_bank_statement_provider.xml",
         "views/enablebanking_application.xml",
     ],
+    "images": ["static/description/banner.png"],
     "demo": [],
 }

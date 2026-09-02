@@ -21,7 +21,7 @@
 {
     "name": "Online Bank Statements: EnableBanking.com",
     "summary": "Fetch bank account statements via EnableBanking.com",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "Invoicing",
     "website": "https://github.com/tawasta/bank-statement-import",
     "author": "RockIT, Futural",

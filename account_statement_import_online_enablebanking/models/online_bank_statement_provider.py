@@ -223,13 +223,14 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             vals["payment_ref"] = "-"
 
         # Try to find partner with exact name match
-        partner_id = (
-            self.env["res.partner"]
-            .sudo()
-            .search([("name", "=ilike", partner_name)], limit=1)
-        )
-        if partner_id:
-            vals["partner_id"] = partner_id.id
+        if partner_name != "" and partner_name is not None:
+            partner_id = (
+                self.env["res.partner"]
+                .sudo()
+                .search([("name", "=ilike", partner_name)], limit=1)
+            )
+            if partner_id:
+                vals["partner_id"] = partner_id.id
 
         if not vals["payment_ref"]:
             vals["payment_ref"] = vals["ref"]

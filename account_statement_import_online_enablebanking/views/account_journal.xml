@@ -23,6 +23,14 @@
           </div>
         </button>
       </xpath>
+
+      <field name="online_bank_statement_provider" position="after">
+        <field
+          name="enablebanking_warning"
+          invisible="not enablebanking_warning"
+          class="text-danger"
+        />
+      </field>
     </field>
   </record>
 </odoo>

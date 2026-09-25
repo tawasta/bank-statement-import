@@ -10,6 +10,6 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[account_statement_import_online_enablebanking](account_statement_import_online_enablebanking/) | 19.0.1.0.1 |  | Fetch bank account statements via EnableBanking.com
+[account_statement_import_online_enablebanking](account_statement_import_online_enablebanking/) | 19.0.1.0.2 |  | Fetch bank account statements via EnableBanking.com
 
 [//]: # (end addons)

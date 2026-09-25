@@ -46,7 +46,11 @@ class EnablebankingApplication(models.Model):
         string="Valid until",
         help="Authentication valid until",
         readonly=True,
-        compute="_compute_valid_until",
+        compute="_compute_session_data",
+    )
+    authenticated_bank_accounts = fields.Char(
+        help="List of bank accounts that are authenticated",
+        compute="_compute_session_data",
     )
     key = fields.Binary(
         string="Private key", help="Private key from your EnableBanking.com portal"
@@ -102,12 +106,18 @@ class EnablebankingApplication(models.Model):
             return {}
         return json.loads(self.session)
 
-    def _compute_valid_until(self):
+    def _compute_session_data(self):
         for record in self:
             session = record._get_session_dict()
 
+            vals = {
+                "valid_until": False,
+                "authenticated_bank_accounts": False,
+            }
+
             if session:
                 _logger.debug(f"Session data: {session}")
+
                 # Get valid until from session data
                 valid_until = session.get("access", {}).get("valid_until")
                 if valid_until:
@@ -116,11 +126,17 @@ class EnablebankingApplication(models.Model):
                     valid_until = datetime.fromisoformat(valid_until).replace(
                         tzinfo=None
                     )
-                    record.valid_until = valid_until
-                else:
-                    record.valid_until = False
-            else:
-                record.valid_until = False
+                    vals["valid_until"] = valid_until
+
+                accounts = []
+                for account in session.get("accounts", []):
+                    iban = account.get("account_id", {}).get("iban")
+                    account_name = account.get("name")
+                    accounts.append(f"{iban} - {account_name}")
+
+                vals["authenticated_bank_accounts"] = ", ".join(accounts)
+
+            record.update(vals)
 
     # Enablebanking
     def action_enablebanking_authenticate(self):

@@ -59,6 +59,39 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             ("enablebanking", "EnableBanking"),
         ]
 
+    def _enablebanking_errors(self) -> str:
+        """
+        Check for any errors related to the EnableBanking application
+        """
+        self.ensure_one()
+        if not self.service or self.service != "enablebanking":
+            return ""
+
+        errors = []
+        application = self.enablebanking_application_id
+        valid_until = application.valid_until
+
+        if not application:
+            errors.append(
+                self.env._(
+                    "EnableBanking application is not configured for this provider. "
+                    "Please configure it."
+                )
+            )
+        elif not application._get_session_dict():
+            # The session is missing
+            errors.append(
+                self.env._("Your bank authentication is invalid. Please authenticate.")
+            )
+        elif not valid_until or valid_until < fields.Datetime.now():
+            errors.append(
+                self.env._(
+                    "Bank authentication is invalid or expired.Please re-authenticate."
+                )
+            )
+
+        return " \n".join(errors)
+
     def _obtain_statement_data(self, date_since, date_until):
         self.ensure_one()
         if self.service != "enablebanking":

@@ -29,6 +29,7 @@
             <group name="credentials" string="Credentials">
               <field name="session" invisible="1" />
               <field name="valid_until" invisible="not session" />
+              <field name="authenticated_bank_accounts" invisible="not session" />
               <field name="application_id" />
               <field name="bank_id" />
               <field name="user_id" />

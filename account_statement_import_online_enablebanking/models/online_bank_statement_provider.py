@@ -143,7 +143,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             "date_from": date_from,
             "date_to": date_to,
         }
-        _logger.info(_logger.info(f"Fetching transactions for {date_from}-{date_to}"))
+        _logger.info(f"Fetching transactions from {date_from} to {date_to}")
 
         jwt = enablebanking._enablebanking_get_jwt_token()
         base_headers = {"Authorization": f"Bearer {jwt}"}
@@ -205,6 +205,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
         """
         Map EnableBanking transaction data to Odoo bank statement line values.
         """
+        _logger.debug(f"Mapping transaction data to bank statement: {transaction}")
         transaction_type = transaction.get("credit_debit_indicator")
         if transaction_type == "DBIT":
             multiplier = -1
@@ -233,10 +234,15 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             "name"
         )
 
-        ref = transaction.get("reference_number") and transaction.get(
-            "reference_number"
-        ).lstrip("0")
-        payment_ref = " ".join(transaction.get("remittance_information")) or ref
+        ref = transaction.get("reference_number")
+        remittance_information = " ".join(transaction.get("remittance_information"))
+        payment_ref = remittance_information or ref
+
+        if payment_ref:
+            # Strip leading zeros to make sure the reconciliation works
+            payment_ref = payment_ref.lstrip("0") or "-"
+        else:
+            payment_ref = "-"
 
         vals = {
             "sequence": sequence,
@@ -252,9 +258,6 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             "narration": partner_name,
         }
 
-        if not vals.get("payment_ref"):
-            vals["payment_ref"] = "-"
-
         # Try to find partner with exact name match
         if partner_name != "" and partner_name is not None:
             partner_id = (
@@ -264,8 +267,5 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             )
             if partner_id:
                 vals["partner_id"] = partner_id.id
-
-        if not vals["payment_ref"]:
-            vals["payment_ref"] = vals["ref"]
 
         return vals

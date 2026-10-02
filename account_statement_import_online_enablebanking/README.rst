@@ -127,6 +127,9 @@ Known issues / Roadmap
 Changelog
 =========
 
+19.0.1.0.3 (2026-10-02) Trim leading zeros to allow better
+reconciliation
+
 19.0.1.0.2 (2026-09-25) Improve usability and errors
 
 19.0.1.0.1 (2026-09-02) Don't search for a partner without name

@@ -190,6 +190,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
                         "Please re-authenticate to fetch bank statements."
                     )
                 )
+                break
             else:
                 raise ValidationError(
                     self.env._(

@@ -184,7 +184,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             elif r.status_code == 401:
                 # Unauthorized (not authorized, expired, etc).
                 _logger.info(f"Error response {r.status_code}: {r.text}")
-                self.post_message(
+                self.message_post(
                     body=self.env._(
                         "Bank authentication is invalid. "
                         "Please re-authenticate to fetch bank statements."

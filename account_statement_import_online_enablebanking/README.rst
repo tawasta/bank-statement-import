@@ -127,6 +127,8 @@ Known issues / Roadmap
 Changelog
 =========
 
+19.0.1.0.4 (2026-10-23) Fix message posting on error
+
 19.0.1.0.3 (2026-10-02) Trim leading zeros to allow better
 reconciliation
 

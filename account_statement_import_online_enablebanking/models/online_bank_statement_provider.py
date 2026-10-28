@@ -237,7 +237,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
 
         ref = transaction.get("reference_number")
         remittance_information = " ".join(transaction.get("remittance_information"))
-        payment_ref = remittance_information or ref
+        payment_ref = ref or remittance_information
 
         if payment_ref:
             # Strip leading zeros to make sure the reconciliation works
@@ -256,7 +256,7 @@ class OnlineBankStatementProviderEnablebanking(models.Model):
             "account_number": transaction.get("creditor_account")
             and transaction.get("creditor_account").get("name"),
             "partner_name": partner_name,
-            "narration": partner_name,
+            "narration": remittance_information,
         }
 
         # Try to find partner with exact name match

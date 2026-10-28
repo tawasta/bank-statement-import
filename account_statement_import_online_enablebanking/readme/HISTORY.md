@@ -1,5 +1,9 @@
+19.0.1.0.5 (2026-10-27)
+Improve statement line information for better matching
+Prefer ref over remittance information for payment reference, and move remittance information to narration.
+
 19.0.1.0.4 (2026-10-23)
-Fix message posting on error
+Fix message posting on statement fetch error
 
 19.0.1.0.3 (2026-10-02)
 Trim leading zeros to allow better reconciliation

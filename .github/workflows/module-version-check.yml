@@ -1,0 +1,16 @@
+name: Module version check
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+    branches:
+      - 19.0
+
+jobs:
+  run-tests:
+    uses: tawasta/github-workflows/.github/workflows/odoo-19-module-version-check.yml@main
+    secrets: inherit
